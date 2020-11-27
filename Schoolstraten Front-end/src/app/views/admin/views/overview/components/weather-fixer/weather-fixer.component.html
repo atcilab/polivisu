@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Weather Fixer</h4>
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="weatherForm" (ngSubmit)="submit()">
+      <div class="form-row">
+        <div class="input-group col">
+          <div class="custom-file">
+            <input
+              formControlName="file"
+              type="file"
+              class="custom-file-input"
+              id="file"
+              (change)="onFileChange($event)"
+            />
+            <label class="custom-file-label" for="file">{{
+              file.value ? fileSource.value.name : "Choose file"
+            }}</label>
+          </div>
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-danger"
+              type="reset"
+              (click)="onReset()"
+            >
+              <span class="fa fa-undo mr-1"></span>Reset
+            </button>
+            <button
+              class="btn btn-outline-primary"
+              type="submit"
+              [disabled]="!weatherForm.valid"
+            >
+              <span class="fa fa-paper-plane mr-1"></span>Upload
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="file.touched && file.invalid">
+        <div *ngIf="file.errors.required" class="text-danger">
+          File is required.
+        </div>
+      </div>
+
+      <!-- <div *ngIf="fileSource && fileSource.valid; else fileTypeError">
+        {{ fileSource.value.name }}
+      </div> -->
+
+      <div *ngIf="fileSource.errors?.invalidType" class="text-danger">
+        {{ fileSource.errors.invalidType }}
+      </div>
+    </form>
+  </div>
+</div>

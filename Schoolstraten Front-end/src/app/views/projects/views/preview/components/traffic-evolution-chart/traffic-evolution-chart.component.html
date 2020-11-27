@@ -1,0 +1,30 @@
+<div class="card" #evolutionChart>
+  <div class="card-header">
+    <div></div>
+    <div>
+      <h5 class="card-title">
+        {{ "preview.charts.evolutionChart.title" | translate }}
+      </h5>
+    </div>
+    <app-dropdown-menu
+      [reports]="rawData"
+      [element]="evolutionChart"
+    ></app-dropdown-menu>
+  </div>
+
+  <div class="card-body">
+    <div class="chart-wrapper">
+      <canvas
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        chartType="line"
+        [plugins]="lineChartPlugins"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

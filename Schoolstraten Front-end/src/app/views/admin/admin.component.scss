@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+  app-overview,
+  app-users,
+  app-projects {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,154 @@
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-12 col-md-10 col-lg-5 col-xl-5">
+      <div class="card">
+        <div class="card-body">
+          <div class="text-center">
+            <h4 class="card-title">{{ "auth.welcome" | translate }}</h4>
+            <img
+              src="assets/images/mechelen.png"
+              alt="Mechelen icon"
+              height="60"
+            />
+          </div>
+
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+            <div class="form-row">
+              <!-- First name -->
+              <div class="form-group col">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  formControlName="firstName"
+                  [placeholder]="'auth.fName' | translate"
+                  class="form-control"
+                  required
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (firstName.dirty || firstName.touched) &&
+                    firstName.invalid &&
+                    firstName.errors.required
+                  "
+                >
+                  {{ "auth.fNameRequired" | translate }}
+                </small>
+              </div>
+              <!-- Last name -->
+              <div class="form-group col">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  formControlName="lastName"
+                  [placeholder]="'auth.lName' | translate"
+                  class="form-control"
+                  required
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (lastName.dirty || lastName.touched) &&
+                    lastName.invalid &&
+                    lastName.errors.required
+                  "
+                >
+                  {{ "auth.lNameRequired" | translate }}
+                </small>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-row">
+              <div class="form-group col-12">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  formControlName="email"
+                  [placeholder]="'auth.email' | translate"
+                  class="form-control"
+                  required
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (email.dirty || email.touched) &&
+                    email.invalid &&
+                    email.errors.required
+                  "
+                >
+                  {{ "auth.emailRequired" | translate }}
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (email.dirty || email.touched) &&
+                    email.invalid &&
+                    email.errors.email
+                  "
+                >
+                  {{ "auth.emailInvalid" | translate }}
+                </small>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-row">
+              <div class="form-group col-12">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  formControlName="password"
+                  [placeholder]="'auth.password' | translate"
+                  class="form-control"
+                  required
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (password.dirty || password.touched) &&
+                    password.invalid &&
+                    password.errors.required
+                  "
+                >
+                  {{ "auth.passwordRequired" | translate }}
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    (password.dirty || password.touched) &&
+                    password.invalid &&
+                    password.errors.minlength
+                  "
+                >
+                  {{ "auth.passwordError" | translate }}
+                </small>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-block mb-2"
+              [disabled]="!registerForm.valid"
+            >
+              {{ "auth.register" | translate }}
+            </button>
+
+            <p class="mb-0">
+              {{ "auth.member" | translate }}
+              <a routerLink="/sign-in" class="card-link">{{
+                "auth.memberSuffix" | translate
+              }}</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

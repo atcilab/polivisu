@@ -1,0 +1,15 @@
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h3>Main navigation</h3>
+  </div>
+
+  <ul class="nav flex-column">
+    <li
+      class="nav-item"
+      *ngFor="let n of navLinks"
+      (click)="onComponentSelect(n.id)"
+    >
+      <a [routerLink]="n.to" class="nav-link">{{ n.text | translate }}</a>
+    </li>
+  </ul>
+</nav>

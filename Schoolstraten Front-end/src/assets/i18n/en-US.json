@@ -1,0 +1,208 @@
+{
+  "navigation": {
+    "projects": "Projects",
+    "createPorject": "Create project",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "language": "Language",
+    "cpanel": "Admin",
+    "download": "Download",
+    "downloadTooltip": "Download reports as CSV file",
+    "downloadRaw": "Complete days",
+    "downloadFiltered": "School street time window",
+    "enterFullscreen": "Enter fullscreen",
+    "en": "EN",
+    "nl": "NL",
+    "fr": "FR"
+  },
+  "leafletPopup": {
+    "totalObject": "Last hour camera has registered an average of {{total}} objects an hour",
+    "lastPackage": "Last data package received on",
+    "cameraID": "Camera ID",
+    "pedestrian": "Pedestrian",
+    "bike": "Bike",
+    "car": "Car",
+    "lorry": "Heavy vehicle"
+  },
+  "footer": {
+    "socialText": "Share now",
+    "usefulInfoText": "Useful information",
+    "terms": "Terms of use",
+    "project": "Project website",
+    "contact": "Contact",
+    "commissionText": "European Commission Affiliation",
+    "commissionParagraphText1": "PoliVisu has received funding from the EU Horizon 2020 research and innovation programme under grant agreement No 769608.",
+    "commissionParagraphText2": "This website represents the view of the PoliVisu project only.",
+    "builtWith": "Built with"
+  },
+  "weekdays": {
+    "monday": "monday",
+    "tuesday": "tuesday",
+    "wednesday": "wednesday",
+    "thursday": "thursday",
+    "friday": "friday",
+    "saturday": "saturday",
+    "sunday": "sunday"
+  },
+  "preview": {
+    "isActive": "Project is active since {{date}}",
+    "isNotActive": "Project is not active yet",
+    "measurementsSchoolstreet": "Measurements in the schoolstreet",
+    "measurementsNeighbouring": "Measurements in the neighbouring streets",
+    "periodSelector": {
+      "addPeriod": "Add period",
+      "removePeriod": "Remove period"
+    },
+    "reportCard": {
+      "btnGroup": {
+        "all": "All streets",
+        "target": "Only school street",
+        "impact": "Neighbouring streets"
+      },
+      "pedestrian": "Pedestrian",
+      "bike": "Bike",
+      "car": "Car",
+      "lorry": "Heavy vehicle"
+    },
+    "charts": {
+      "pedTarget": "Pedestrian - School street",
+      "pedImpact": "Pedestrian - Neighbourhood",
+      "bikeTarget": "Bike - School street",
+      "bikeImpact": "Bike - Neighbourhood",
+      "carTarget": "Car - School street",
+      "carImpact": "Car - Neighbourhood",
+      "lorryTarget": "Heavy vehicle - School street",
+      "lorryImpact": "Heavy vehicle - Neighbourhood",
+      "tooltips": {
+        "title": "Information",
+        "actions": "Actions",
+        "activated": "Indicates that the school street is active",
+        "deactivated": "Indicates that the school street is not active"
+      },
+      "bicycleChart": {
+        "title": "Number of bicycles in school street during rush hour vs target",
+        "target": "Target",
+        "numberOfBikes": "Number of bicycles"
+      },
+      "evolutionChart": {
+        "title": "Evolution of all traffic in all impacted streets"
+      },
+      "objectDetailedChart": {
+        "title": "Trend of traffic for different modes in schoolstraat and neighbouring streets"
+      },
+      "pieCharts": {
+        "targetTitle": "School street",
+        "impactTitle": "Neighbouring streets",
+        "firstPeriod": "First period",
+        "secondPeriod": "Second period"
+      },
+      "deltaCharts": {
+        "absoluteTitle": "Differences between the two periods",
+        "relativeTitle": "Relative difference between the two periods"
+      }
+    }
+  },
+  "admin": {
+    "menu": {
+      "title": "Main Navigation",
+      "overview": "Overview",
+      "users": "Users",
+      "projects": "Projects"
+    },
+    "shared": {
+      "seeMore": "See more"
+    },
+    "projects": {
+      "title": "Projects",
+      "activeTitle": "Active schoolstraat project",
+      "inactiveTitle": "Inactive schoolstraat project",
+      "pTitle": "Title",
+      "createdBy": "Created by",
+      "dateCreated": "Date created",
+      "status": "Status",
+      "activationDate": "Activation date",
+      "actions": "Actions",
+      "caption": "List of projects"
+    },
+    "users": {
+      "title": "Users",
+      "allUsers": "Total registered users",
+      "admins": "Admin",
+      "creators": "Project Manager",
+      "users": "To assign",
+      "fName": "First name",
+      "lName": "Last name",
+      "email": "Email",
+      "role": "Role",
+      "actions": "Actions",
+      "caption": "List of users"
+    }
+  },
+  "create": {
+    "shared": {
+      "required": "Required",
+      "optional": "Optional"
+    },
+    "info": {
+      "title": "Project information",
+      "projectTitle": "Title",
+      "totalNumberOfBikes": "Target number of cyclists",
+      "address": "Address",
+      "website": "Website",
+      "status": "Status",
+      "activationDate": "Activation date",
+      "active": "Active"
+    },
+    "image": {
+      "cardTitle": "Add image of the school",
+      "chooseFile": "Select file",
+      "removeFile": "Remove image",
+      "title": "Title",
+      "preview": "Preview",
+      "actions": "Actions",
+      "delete": "Delete",
+      "caption": "Click on the image to preview",
+      "dbClick": "Double click to select an image",
+      "uploadFile": "Upload an image"
+    },
+    "roads": {
+      "target": "School street",
+      "impact": "Neighbouring Roads",
+      "dragTarget": "Drag school street here",
+      "dragImpact": "Drag neighbouring roads here",
+      "editRoads": "Edit roads",
+      "btnText": "Show roads"
+    },
+    "closures": {
+      "title": "Road closures",
+      "btnText": "Add"
+    },
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "auth": {
+    "welcome": "Welcome",
+    "email": "Your email",
+    "password": "Your password",
+    "signIn": "Sign in",
+    "register": "Register",
+    "noMember": "Not registered? Register",
+    "noMemberSuffix": "here.",
+    "member": "Already registered? Sign in",
+    "memberSuffix": "here",
+    "fName": "First name",
+    "fNameRequired": "First name is required",
+    "lName": "Last name",
+    "lNameRequired": "Last name is required",
+    "passwordRequired": "Password is required",
+    "passwordError": "Password must be at least 6 characters in length",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Email is not valid"
+  },
+  "modals": {
+    "title": "Are you sure?",
+    "text": "You won't be able to revert this!",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

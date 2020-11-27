@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">{{ title }}</h4>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6">
+        <r-box
+          [report-title]="'admin.projects.activeTitle' | translate"
+          [report-value]="active"
+          src="assets/images/svg/001-shuttle.svg"
+          [alt]="'admin.projects.activeTitle' | translate"
+        ></r-box>
+      </div>
+      <div class="col-6">
+        <r-box
+          [report-title]="'admin.projects.inactiveTitle' | translate"
+          [report-value]="inactive"
+          src="assets/images/svg/002-rocket.svg"
+          [alt]="'admin.projects.inactiveTitle' | translate"
+        ></r-box>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer" *ngIf="navigate">
+    <a
+      [routerLink]="navigate"
+      class="d-block h5 mb-0 card-link text-center text-muted"
+      >{{ "admin.shared.seeMore" | translate }}</a
+    >
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@import "src/assets/variables";
+
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+
+  .card-header {
+    background: $white;
+    padding-top: 2em;
+    padding-bottom: 0em;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+}

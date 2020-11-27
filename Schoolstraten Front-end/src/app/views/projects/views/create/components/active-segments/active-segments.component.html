@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="active-segments" id="active-segments"></div>
+  <ng-template [ngIf]="isLoading">
+    <div class="loading-wrapper">
+      <spinner></spinner>
+    </div>
+  </ng-template>
+</div>
+
+<h6 class="my-3" *ngIf="lastSelectedRoad">
+  Last selected road: {{ lastSelectedRoad }}
+</h6>

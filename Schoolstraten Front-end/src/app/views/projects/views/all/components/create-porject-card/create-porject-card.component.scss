@@ -1,0 +1,30 @@
+@import "src/assets/variables";
+
+.card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: calc(100% - 1.5em);
+  background: $gray-100;
+
+  .card-link {
+    height: 100%;
+    color: $gray-600;
+
+    &:hover {
+      color: $dark;
+    }
+
+    .card-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h6 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

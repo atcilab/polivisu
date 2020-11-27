@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <div class="report-outter">
+      <div class="report-inner">
+        <img [src]="getImage()" alt="Logo" height="75" />
+        <p>{{ getText() | translate }}</p>
+      </div>
+      <div class="report-inner">
+        <p class="number-big">
+          {{ object.report | number: "1.0-0" | noComma }}
+        </p>
+        <p class="number-small">{{ getPCT() }}</p>
+      </div>
+    </div>
+  </div>
+</div>

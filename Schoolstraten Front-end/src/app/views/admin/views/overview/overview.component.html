@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <p-reports
+        [p-title]="'admin.projects.title' | translate"
+        [p-projects]="projects"
+        navigate="/admin/projects"
+      ></p-reports>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <u-reports
+        [u-title]="'admin.users.title' | translate"
+        [u-users]="users"
+        navigate="/admin/users"
+      ></u-reports>
+    </div>
+
+    <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <c-reports></c-reports>
+    </div> -->
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <weather-fixer></weather-fixer>
+    </div>
+  </div>
+</div>

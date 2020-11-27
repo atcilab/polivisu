@@ -1,0 +1,17 @@
+.container {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .btn {
+    margin-right: 0.75em;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

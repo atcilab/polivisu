@@ -1,0 +1,31 @@
+<div class="card" #objectChart>
+  <div class="card-header">
+    <div></div>
+    <div>
+      <h5 class="card-title">
+        {{ "preview.charts.objectDetailedChart.title" | translate }}
+      </h5>
+    </div>
+    <app-dropdown-menu
+      [reports]="rawData"
+      [element]="objectChart"
+    ></app-dropdown-menu>
+  </div>
+
+  <div class="card-body">
+    <div class="chart-wrapper">
+      <canvas
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+        chartType="bar"
+        [plugins]="lineChartPlugins"
+        [colors]="lineChartColors"
+      >
+      </canvas>
+    </div>
+    <!-- [colors]="lineChartColors" -->
+  </div>
+</div>

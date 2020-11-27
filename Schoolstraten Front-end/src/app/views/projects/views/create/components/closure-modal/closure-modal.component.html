@@ -1,0 +1,136 @@
+<form [formGroup]="closuresForm" (ngSubmit)="onSubmit()">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Add road closures</h4>
+    <button
+      type="button"
+      class="close pull-right"
+      aria-label="Close"
+      (click)="bsModalRef.hide()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-row">
+      <div class="form-group col">
+        <label for="weekdays">Weekdays</label>
+        <select
+          multiple
+          formControlName="weekdays"
+          class="form-control"
+          id="weekdays"
+          name="weekdays"
+        >
+          <option value="" selected disabled>Select weekdays</option>
+          <option *ngFor="let w of weekdaysArray" [value]="w.value">{{
+            w.text | translate | capitalize
+          }}</option>
+        </select>
+        <small class="text-danger" *ngIf="cf.weekdays?.errors?.required"
+          >You need to select at least a day</small
+        >
+        <small class="text-muted">Press ctrl + select the wanted weekday</small>
+      </div>
+
+      <div class="form-group col">
+        <label for="closures">Number of closures</label>
+
+        <select
+          formControlName="numberOfClosures"
+          class="form-control"
+          (change)="onChangeClosures($event)"
+        >
+          <option
+            *ngFor="let i of [0, 1, 2, 3, 4]"
+            [value]="i === 0 ? '' : i"
+            [disabled]="i === 0 ? 'disabled' : ''"
+            [selected]="i === 0 ? 'selected' : ''"
+            >{{ i === 0 ? "Select number of closures" : i }}</option
+          >
+        </select>
+        <small class="text-danger" *ngIf="cf.numberOfClosures?.errors?.required"
+          >Number of closures is required</small
+        >
+      </div>
+    </div>
+
+    <div class="form-row" *ngFor="let closure of nc.controls; let i = index">
+      <div class="col">
+        <h5>Closure {{ i + 1 }}</h5>
+        <form [formGroup]="closure">
+          <div class="form-row justify-content-center">
+            <div class="form-group col">
+              <div class="d-flex align-items-center">
+                <label>Start time</label>
+                <div>
+                  <timepicker formControlName="start"></timepicker>
+                  <small
+                    class="text-danger"
+                    *ngIf="closure.controls.start.errors?.required"
+                    >Start time is required</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="form-group col">
+              <div class="d-flex align-items-center">
+                <label for="">End time</label>
+                <div>
+                  <timepicker formControlName="end"></timepicker>
+                  <small
+                    class="text-danger"
+                    *ngIf="closure.controls.end.errors?.required"
+                    >End time is required</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- <ul class="list-group list-group-flush w-100">
+        <li
+          class="list-group-item px-0 border-bottom-0"
+          *ngFor="let closure of nc.controls; let i = index"
+        >
+          <h5>Closure {{ i + 1 }}</h5>
+          <form
+            [formGroup]="closure"
+            class="form-inline justify-content-between"
+          >
+            <div class="form-group col">
+              <label>Start time</label>
+              <div>
+                <timepicker formControlName="start"></timepicker>
+                <small
+                  class="text-danger"
+                  *ngIf="closure.controls.start.errors?.required"
+                  >Start time is required</small
+                >
+              </div>
+            </div>
+            <div class="form-group col">
+              <label for="">End time</label>
+              <div>
+                <timepicker formControlName="end"></timepicker>
+                <small
+                  class="text-danger"
+                  *ngIf="closure.controls.end.errors?.required"
+                  >End time is required</small
+                >
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul> -->
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">
+      cancel
+    </button>
+    <button class="btn btn-primary ml-2" [disabled]="!closuresForm.valid">
+      save
+    </button>
+  </div>
+</form>

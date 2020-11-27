@@ -1,0 +1,40 @@
+<div class="spinner-wrapper" *ngIf="isLoading">
+  <spinner></spinner>
+</div>
+
+<div class="container">
+  <div class="row">
+    <!-- Project information -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <information (addressChange)="onAddress($event)"></information>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <upload-image (file)="onFile($event)"></upload-image>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+      <segments (onRemove)="segment = $event"></segments>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+      <active-segments
+        [onRemove]="segment"
+        [address]="address"
+      ></active-segments>
+      <road-closures></road-closures>
+
+      <div class="buttons">
+        <button class="btn px-4 btn-secondary" (click)="onCancel()">
+          {{ "create.cancel" | translate }}
+        </button>
+        <button class="btn px-4 btn-primary" (click)="onSave()">
+          {{ "create.save" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

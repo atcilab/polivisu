@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">{{ "create.image.cardTitle" | translate }}</h4>
+  </div>
+  <div class="card-body">
+    <img
+      #img
+      *ngIf="imgURL"
+      [src]="imgURL"
+      alt="School street image"
+      class="img-thumbnail"
+      (click)="previewImage()"
+    />
+    <button class="btn btn-sm" (click)="onUpload()">
+      <span class="fa fa-upload"></span>
+      <span class="ml-2">{{ "create.image.uploadFile" | translate }}</span>
+    </button>
+    <button
+      class="btn btn-sm btn-danger ml-3"
+      type="button"
+      (click)="removeImage()"
+      *ngIf="selectedFile"
+    >
+      <span class="fa fa-trash"></span>
+      <span class="ml-2">{{ "create.image.removeFile" | translate }}</span>
+    </button>
+  </div>
+</div>
+
+<input
+  #fileInput
+  type="file"
+  class="d-none"
+  id="schoolImage"
+  name="schoolImage"
+  accept="image/*"
+  (change)="onFileSelected($event)"
+/>

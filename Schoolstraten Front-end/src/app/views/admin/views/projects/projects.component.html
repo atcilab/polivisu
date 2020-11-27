@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">{{ "admin.projects.title" | translate }}</h4>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <caption class="pb-0">
+                {{
+                  "admin.projects.caption" | translate
+                }}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" (click)="sortBy('title')">
+                    {{ "admin.projects.pTitle" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('title')"></span>
+                  </th>
+                  <th scope="col">
+                    {{ "admin.projects.createdBy" | translate }}
+                  </th>
+                  <th scope="col" (click)="sortBy('createdAt')">
+                    {{ "admin.projects.dateCreated" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('createdAt')"></span>
+                  </th>
+                  <th scope="col" (click)="sortBy('isActive')">
+                    {{ "admin.projects.status" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('isActive')"></span>
+                  </th>
+                  <th scope="col" (click)="sortBy('isActiveSince')">
+                    {{ "admin.projects.activationDate" | translate }}
+                    <span
+                      class="fa"
+                      [ngClass]="isSortedBy('isActiveSince')"
+                    ></span>
+                  </th>
+                  <th scope="col">
+                    {{ "admin.projects.actions" | translate }}
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngFor="let p of projects">
+                  <td>{{ p.title }}</td>
+                  <td>{{ getUser(p.user) }}</td>
+                  <td>{{ p.createdAt | date }}</td>
+                  <td>{{ p.isActive ? "Started" : "Not started" }}</td>
+                  <td>{{ p.isActiveSince | date }}</td>
+                  <td>
+                    <button class="btn btn-sm" (click)="onEdit(p)">
+                      <span class="fa fa-edit"></span>
+                    </button>
+                    <button class="btn btn-sm" (click)="onRemove(p)">
+                      <span class="fa fa-trash"></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

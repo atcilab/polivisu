@@ -1,0 +1,41 @@
+<div class="spinner-wrapper" *ngIf="isLoading">
+  <spinner></spinner>
+</div>
+
+<div class="bg-image"></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <message></message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2"
+      *ngIf="isLoggedIn | async"
+    >
+      <create-porject-card></create-porject-card>
+    </div>
+    <ng-template [ngIf]="projects">
+      <div
+        class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2"
+        *ngFor="let p of projects"
+      >
+        <preview-project-card
+          [project]="p"
+          (onDeleted)="getProjects()"
+        ></preview-project-card>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="row">
+    <div class="col-12 px-0">
+      <active-segments-map [projects]="projects"></active-segments-map>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,114 @@
+<div class="spinner-wrapper" *ngIf="_pdService.reports.isLoading">
+  <spinner></spinner>
+</div>
+
+<div class="container-fluid" *ngIf="project">
+  <!-- Title -->
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="d-flex justify-content-between align-items-center">
+        <div></div>
+
+        <div>
+          <img
+            [src]="
+              project.isActive
+                ? 'assets/images/svg/005-correct.svg'
+                : 'assets/images/svg/006-correct-1.svg'
+            "
+            height="50"
+            class="mr-2"
+          />
+          <h1 class="mb-0 vertical-center">
+            {{ project.title }}
+          </h1>
+        </div>
+
+        <div>
+          <span>{{ getIsActiveText() | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image, Map and Roads -->
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-4 col-xl-4 px-lg-0">
+      <div class="project-image">
+        <img [src]="project?.image" [alt]="project?.title" imgFallback />
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 px-lg-0">
+      <project-camera-map [project]="project"></project-camera-map>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <project-road-names [project]="project"></project-road-names>
+    </div>
+  </div>
+
+  <!-- Period selector -->
+  <div class="row justify-content-center bg-grey">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <project-period-selector [project]="project"></project-period-selector>
+    </div>
+
+    <div
+      class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+      *ngIf="_pdService.hasSecondPeriod"
+    >
+      <project-sub-period-selector
+        [project]="project"
+      ></project-sub-period-selector>
+    </div>
+  </div>
+
+  <div *ngIf="!_pdService.reports.isLoading">
+    <!-- Object Reports and Bicycles Chart -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <project-reports></project-reports>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <bicycles-chart [project]="project"></bicycles-chart>
+      </div>
+    </div>
+
+    <!-- Absolute delta chart and Relative delta chart -->
+    <div class="row" *ngIf="_pdService.hasSecondPeriod">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <project-absolute-delta-chart
+          [project]="project"
+        ></project-absolute-delta-chart>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <project-relative-delta-chart [project]="project">
+        </project-relative-delta-chart>
+      </div>
+    </div>
+
+    <!-- Traffic evolution and Traffic per object in every street -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <traffic-evolution-chart [project]="project"></traffic-evolution-chart>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <object-detailed-chart [project]="project"></object-detailed-chart>
+      </div>
+    </div>
+
+    <!-- Object pie chart and Traffic per object in every street-->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <pie-charts [project]="project"></pie-charts>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <object-detailed-mirror-chart
+          [project]="project"
+        ></object-detailed-mirror-chart>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

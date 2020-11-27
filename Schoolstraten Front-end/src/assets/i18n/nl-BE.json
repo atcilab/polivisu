@@ -1,0 +1,208 @@
+{
+  "navigation": {
+    "projects": "Projecten",
+    "createPorject": "Creëer project",
+    "signIn": "Inloggen",
+    "signOut": "Afmelden",
+    "language": "Taal",
+    "cpanel": "Admin",
+    "download": "Downloaden",
+    "downloadTooltip": "Download rapporten als CSV-bestand",
+    "enterFullscreen": "Ga naar volledig scherm",
+    "downloadRaw": "Volledige dagen",
+    "downloadFiltered": "Schoolstraat uren",
+    "en": "EN",
+    "nl": "NL",
+    "fr": "FR"
+  },
+  "leafletPopup": {
+    "totalObject": "De camera registreerde het laatste uur een gemiddelde van {{total}} objecten per uur",
+    "lastPackage": "Laatste data package ontvangen op",
+    "cameraID": "Camera ID",
+    "pedestrian": "Voetgangers",
+    "bike": "Fiets",
+    "car": "Auto's",
+    "lorry": "Grote voertuigen"
+  },
+  "footer": {
+    "socialText": "Partage maintenant",
+    "usefulInfoText": "Informations utiles",
+    "terms": "Conditions d'utilisation",
+    "project": "Site web du projet",
+    "contact": "Contact",
+    "commissionText": "Affiliation à la Commission européenne",
+    "commissionParagraphText1": "Ce projet a reçu un financement du programme de recherche et d'innovation Horizon 2020 de l'Union européenne dans le cadre de la convention de subvention nobre 769608.",
+    "commissionParagraphText2": "Veuillez noter que ce site Web représente le point de vue du projet PoliVisu et que la Commission n'est pas responsable de l'utilisation qui pourrait être faite des informations qu'il contient.",
+    "builtWith": "Gebouwd met"
+  },
+  "weekdays": {
+    "monday": "maandag",
+    "tuesday": "dinsdag",
+    "wednesday": "woensdag",
+    "thursday": "donderdag",
+    "friday": "vrijdag",
+    "saturday": "zaterdag",
+    "sunday": "zondag"
+  },
+  "preview": {
+    "isActive": "Project is actief sinds {{date}}",
+    "isNotActive": "Project is niet actief",
+    "measurementsSchoolstreet": "Metingen in de schoolstraat",
+    "measurementsNeighbouring": "Straten uit de buurt",
+    "periodSelector": {
+      "addPeriod": "Tweede periode",
+      "removePeriod": "Verwijder"
+    },
+    "reportCard": {
+      "btnGroup": {
+        "all": "Alle straten",
+        "target": "Schoolstraat",
+        "impact": "Straten uit de buurt"
+      },
+      "pedestrian": "Voetgangers",
+      "bike": "Fiets",
+      "car": "Auto's",
+      "lorry": "Grote voertuigen"
+    },
+    "charts": {
+      "pedTarget": "Voetgangers - Schoolstraat",
+      "pedImpact": "Voetgangers - Straten uit de buurt",
+      "bikeTarget": "Fiets - Schoolstraat",
+      "bikeImpact": "Fiets - Straten uit de buurt",
+      "carTarget": "Auto’s - Schoolstraat",
+      "carImpact": "Auto’s - Straten uit de buurt",
+      "lorryTarget": "Grote voertuigen - Schoolstraat",
+      "lorryImpact": "Grote voertuigen - Straten uit de buurt",
+      "tooltips": {
+        "title": "Informatie",
+        "actions": "Acties",
+        "activated": "Toont dat de schoolstraat actief was",
+        "deactivated": "Toont dat de schoolstraat nog niet actief was"
+      },
+      "bicycleChart": {
+        "title": "Aantal fietsers in schoolstraat tijdens schoolspits vs target",
+        "target": "Target",
+        "numberOfBikes": "Aantal fietsers"
+      },
+      "evolutionChart": {
+        "title": "Evolutie van verkeer in alle geïmpacteerde straten"
+      },
+      "objectDetailedChart": {
+        "title": "Trend van verkeer in verschillende modi voor schoolstraten en straten uit de buurt"
+      },
+      "pieCharts": {
+        "targetTitle": "Schoolstraat",
+        "impactTitle": "Straten uit de buurt",
+        "firstPeriod": "Eerste periode",
+        "secondPeriod": "Tweede periode"
+      },
+      "deltaCharts": {
+        "absoluteTitle": "Verschillen tussen de twee periodes",
+        "relativeTitle": "Relatief verschil tussen de twee periodes"
+      }
+    }
+  },
+  "admin": {
+    "menu": {
+      "title": "Main Navigation",
+      "overview": "Overview",
+      "users": "Gebruikers",
+      "projects": "Projecten"
+    },
+    "shared": {
+      "seeMore": "Meer"
+    },
+    "projects": {
+      "title": "Projecten",
+      "activeTitle": "Actieve schoolstraat projecten",
+      "inactiveTitle": "Inactieve schoolstraat projecten",
+      "pTitle": "Titel",
+      "createdBy": "Gemaakt door",
+      "dateCreated": "Gemaakt op",
+      "status": "Status",
+      "activationDate": "Actief op",
+      "actions": "Acties",
+      "caption": "Lijst met projecten"
+    },
+    "users": {
+      "title": "Gebruikers",
+      "allUsers": "Total registered users",
+      "admins": "Admin",
+      "creators": "Project Manager",
+      "users": "Te assigneren",
+      "fName": "Voornaam",
+      "lName": "Familienaam",
+      "email": "Email",
+      "role": "Rol",
+      "actions": "Acties",
+      "caption": "Lijst met gebruikers"
+    }
+  },
+  "create": {
+    "shared": {
+      "required": "Verplicht",
+      "optional": "Optioneel"
+    },
+    "info": {
+      "title": "Project informatie",
+      "projectTitle": "Titel",
+      "totalNumberOfBikes": "Target aantal fietsers",
+      "address": "Adres",
+      "website": "Website",
+      "status": "Status",
+      "activationDate": "Actief vanaf",
+      "active": "Actief"
+    },
+    "image": {
+      "cardTitle": "Voeg foto van de school toe",
+      "chooseFile": "Kies bestand",
+      "removeFile": "Verwijder foto",
+      "title": "Titel",
+      "preview": "Voorbeeld",
+      "actions": "Acties",
+      "delete": "Verwijderen",
+      "caption": "Klik op de afbeelding om een voorbeeld te bekijken",
+      "dbClick": "Dubbelklik om een afbeelding te selecteren",
+      "uploadFile": "Upload een afbeelding"
+    },
+    "roads": {
+      "target": "Schoolstraat",
+      "impact": "Straten uit de buurt",
+      "dragTarget": "Sleep choolstraat hier",
+      "dragImpact": "Sleep Straat uit de buurt hier",
+      "editRoads": "Bewerk wegen",
+      "btnText": "toon wegen"
+    },
+    "closures": {
+      "title": "Afgesloten tijdstippen",
+      "btnText": "Nieuw"
+    },
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "auth": {
+    "welcome": "Welkom",
+    "email": "Email",
+    "password": "Wachtwoord",
+    "signIn": "Log in",
+    "register": "Registreren",
+    "noMember": "Nog niet geregistreerd? Registreer",
+    "noMemberSuffix": "hier.",
+    "member": "Al geregistreerd?",
+    "memberSuffix": "Log hier in.",
+    "fName": "Voornaam",
+    "fNameRequired": "Voornaam is verplicht",
+    "lName": "Achternaam",
+    "lNameRequired": "Achternaam is verplicht",
+    "passwordRequired": "Een wachtwoord is verplicht",
+    "passwordError": "Wachtwoord moet minimaal 6 tekens lang zijn",
+    "emailRequired": "E-mail is verplicht",
+    "emailInvalid": "E-mail is niet geldig"
+  },
+  "modals": {
+    "title": "Ben je zeker?",
+    "text": "Dit kan niet ongedaan worden gemaaktç!",
+    "yes": "Ja",
+    "no": "Nee"
+  }
+}

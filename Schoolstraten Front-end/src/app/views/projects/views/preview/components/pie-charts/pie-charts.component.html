@@ -1,0 +1,60 @@
+<div class="card" #pieCharts>
+  <div class="card-header">
+    <div></div>
+    <div>
+      <!-- <h5 class="card-title"></h5> -->
+    </div>
+    <app-dropdown-menu
+      [hasInfo]="false"
+      [reports]="rawData"
+      [element]="pieCharts"
+    ></app-dropdown-menu>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="row-title">
+        <h6>{{ "preview.charts.pieCharts.firstPeriod" | translate }}</h6>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <pie
+          [project]="project"
+          chartTitle="preview.charts.pieCharts.targetTitle"
+          [hasSecondPeriod]="false"
+          [isTarget]="true"
+        ></pie>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <pie
+          [project]="project"
+          chartTitle="preview.charts.pieCharts.impactTitle"
+          [hasSecondPeriod]="false"
+          [isTarget]="false"
+        ></pie>
+      </div>
+    </div>
+
+    <!-- If second period -->
+    <div class="row" *ngIf="_pdService.hasSecondPeriod">
+      <div class="row-title">
+        <h6>{{ "preview.charts.pieCharts.secondPeriod" | translate }}</h6>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <pie
+          [project]="project"
+          chartTitle="preview.charts.pieCharts.targetTitle"
+          [hasSecondPeriod]="true"
+          [isTarget]="true"
+        ></pie>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <pie
+          [project]="project"
+          chartTitle="preview.charts.pieCharts.impactTitle"
+          [hasSecondPeriod]="true"
+          [isTarget]="false"
+        ></pie>
+      </div>
+    </div>
+  </div>
+</div>

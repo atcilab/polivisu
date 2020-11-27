@@ -1,0 +1,114 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Edit user</h4>
+    <button
+      type="button"
+      class="close pull-right"
+      aria-label="Close"
+      (click)="onModalClose()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- First name and Last name -->
+    <div class="form-row">
+      <!-- First name -->
+      <div class="form-group col">
+        <label for="firstName" class="label">First name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First Name"
+          aria-label="First Name"
+          aria-describedby="first-name"
+          formControlName="firstName"
+          id="firstName"
+          name="firstName"
+        />
+        <small class="text-danger" *ngIf="hasError(firstName)"
+          >First name is required</small
+        >
+      </div>
+      <!-- Last name -->
+      <div class="form-group col">
+        <label for="lastName" class="label">Last name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last Name"
+          aria-label="Last Name"
+          aria-describedby="last-name"
+          formControlName="lastName"
+          id="lastName"
+          name="lastName"
+        />
+        <small class="text-danger" *ngIf="hasError(lastName)"
+          >Last name is required</small
+        >
+      </div>
+    </div>
+
+    <!-- Email and Role -->
+    <div class="form-row">
+      <!-- Email -->
+      <div class="form-group col">
+        <label for="email" class="label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Email"
+          aria-label="Email"
+          aria-describedby="email"
+          formControlName="email"
+          id="email"
+          name="email"
+        />
+        <small class="text-danger" *ngIf="hasError(email)"
+          >Email is required</small
+        >
+        <small class="text-danger" *ngIf="hasError(email, true)"
+          >Email is not valid</small
+        >
+      </div>
+      <!-- Role -->
+      <div class="form-group col">
+        <label for="role" class="label">Role</label>
+        <select
+          name="role"
+          id="role"
+          class="form-control"
+          placeholder="Role"
+          aria-label="Role"
+          aria-describedby="role"
+          formControlName="role"
+        >
+          <option value="" disabled selected>Select user's role</option>
+          <option value="user">User</option>
+          <option value="creator">Creator</option>
+          <option value="admin">Admin</option>
+        </select>
+        <small class="text-danger" *ngIf="hasError(role)"
+          >Role is required</small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-sm btn-default px-4"
+      (click)="onModalClose()"
+    >
+      Cancel
+    </button>
+
+    <button
+      type="submit"
+      class="btn btn-sm btn-primary px-4"
+      [disabled]="!userForm.valid"
+    >
+      Update
+    </button>
+  </div>
+</form>

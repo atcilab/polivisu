@@ -1,0 +1,14 @@
+@import "src/assets/variables";
+.row {
+  padding: 2em 0;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+input.form-control[disabled],
+input[type="text"][disabled],
+[type="text"].form-control[disabled] {
+  color: $gray-600;
+}

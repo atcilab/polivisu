@@ -1,0 +1,43 @@
+<div class="row justify-content-center align-items-center">
+  <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+    <div class="input-group input-group-sm">
+      <input
+        type="text"
+        class="form-control"
+        bsDatepicker
+        [(ngModel)]="start"
+        [bsConfig]="bsConfig"
+        (bsValueChange)="onValueChange($event)"
+      />
+      <div class="input-group-append">
+        <span class="input-group-text">
+          <i class="far fa-calendar-alt"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+    <div class="input-group input-group-sm">
+      <input
+        type="text"
+        class="form-control"
+        bsDatepicker
+        [(ngModel)]="end"
+        [bsConfig]="bsConfig"
+        disabled
+      />
+      <div class="input-group-append">
+        <span class="input-group-text">
+          <i class="far fa-calendar-alt"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
+    <button class="btn btn-block btn-secondary" (click)="onPeriod()">
+      {{ "preview.periodSelector.removePeriod" | translate }}
+    </button>
+  </div>
+</div>

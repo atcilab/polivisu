@@ -1,0 +1,143 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">{{ "create.info.title" | translate }}</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="infoGroup">
+      <!-- Project's title and Total number of bikes -->
+      <div class="form-row">
+        <!-- Project's title -->
+        <div class="form-group col">
+          <label for="title" class="label">{{
+            "create.info.projectTitle" | translate
+          }}</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            formControlName="title"
+            placeholder="ex. Basisschool Lyceum Mechelen"
+          />
+          <small class="text-danger" *ngIf="hasError(title)"
+            >Project's title is required</small
+          >
+          <small class="text-muted">{{
+            "create.shared.required" | translate
+          }}</small>
+        </div>
+
+        <!-- Total number of bikes -->
+        <div class="form-group col">
+          <label for="totalBikes" class="label">{{
+            "create.info.totalNumberOfBikes" | translate
+          }}</label>
+          <input
+            type="number"
+            min="0"
+            name="totalBikes"
+            id="totalBikes"
+            class="form-control"
+            formControlName="totalBikes"
+            placeholder="ex. Basisschool Lyceum Mechelen"
+          />
+          <small class="text-danger" *ngIf="hasError(totalBikes)"
+            >Number of bikes cannot be less that 0</small
+          >
+          <small class="text-muted">{{
+            "create.shared.required" | translate
+          }}</small>
+        </div>
+      </div>
+
+      <!-- Address and website -->
+      <div class="form-row">
+        <!-- School's address -->
+        <div class="form-group col">
+          <label for="address" class="label">{{
+            "create.info.address" | translate
+          }}</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            class="form-control"
+            formControlName="address"
+            placeholder="ex. Caputsteenstraat, Mechelen, Belgium"
+            (blur)="onAddressChange()"
+          />
+          <small class="text-muted">{{
+            "create.shared.optional" | translate
+          }}</small>
+        </div>
+
+        <!-- School's website -->
+        <div class="form-group col">
+          <label for="website" class="label">{{
+            "create.info.website" | translate
+          }}</label>
+          <input
+            type="url"
+            name="website"
+            id="website"
+            class="form-control"
+            formControlName="website"
+            placeholder="ex. https://bslyceum.be/"
+            (blur)="onBlur()"
+          />
+          <small class="text-danger" *ngIf="hasError(website)"
+            >Enter a valid URL link</small
+          >
+          <small class="text-muted">{{
+            "create.shared.optional" | translate
+          }}</small>
+        </div>
+      </div>
+
+      <!-- Activation date and status -->
+      <div class="form-row">
+        <!-- Activation date -->
+        <div class="form-group col">
+          <label for="activationDate" class="label">{{
+            "create.info.activationDate" | translate
+          }}</label>
+          <input
+            type="text"
+            name="activationDate"
+            id="activationDate"
+            class="form-control"
+            formControlName="activationDate"
+            placeholder="ex. dd/mm/yyyy"
+            autocomplete="off"
+            [bsConfig]="bsConfig"
+            bsDatepicker
+          />
+          <small class="text-danger" *ngIf="hasError(activationDate)"
+            >Activation date is required.</small
+          >
+          <small class="text-muted">{{
+            "create.shared.required" | translate
+          }}</small>
+        </div>
+
+        <!-- Project's status -->
+        <div class="form-group col">
+          <label for="isActive" class="label">{{
+            "create.info.status" | translate
+          }}</label>
+          <div class="custom-control custom-checkbox mt-3">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="isActive"
+              formControlName="isActive"
+            />
+            <label class="custom-control-label" for="isActive">{{
+              "create.info.active" | translate
+            }}</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

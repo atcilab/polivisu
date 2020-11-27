@@ -1,0 +1,77 @@
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <h4>Share now</h4>
+        <ul class="nav">
+          <li class="nav-item" *ngFor="let s of shareLinks">
+            <a
+              [href]="s.to"
+              class="nav-link"
+              target="_blank"
+              (click)="copyToClipboard($event, s.to)"
+              rel="noopener"
+            >
+              <span [class]="s.icon"></span>
+            </a>
+          </li>
+        </ul>
+        <div class="created-by">
+          <a
+            *ngFor="let c of createdBy"
+            [href]="c.to"
+            target="_blank"
+            rel="noopener"
+          >
+            <img [src]="c.icon" [alt]="c.text" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <h4>Useful Information</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item" *ngFor="let u of usefulLinks; index as i">
+            <a
+              rel="noopener"
+              [href]="u.to"
+              class="nav-link"
+              *ngIf="i !== usefulLinks.length - 1; else noLink"
+              >{{ u.text }}</a
+            >
+            <ng-template #noLink>
+              <span class="nav-link">{{ u.text }}</span>
+              <ul class="nav flex-column">
+                <li class="nav-item" *ngFor="let b of builtWith">
+                  <a
+                    rel="noopener"
+                    [href]="b.to"
+                    class="nav-link"
+                    target="_blank"
+                  >
+                    {{ b.text }}
+                  </a>
+                </li>
+              </ul>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4>European Commission Affiliation</h4>
+          <img src="assets/images/eu.webp" alt="EU Flag" />
+        </div>
+        <p>
+          This project has received funding from the European Union’s Horizon
+          2020 research and innovation programme under grant agreement No
+          769608.
+        </p>
+        <p>
+          This website represents the view of the PoliVisu project only.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,29 @@
+.custom-file {
+  .custom-file-input:lang(en) ~ .custom-file-label::after {
+    padding-right: 2em;
+    display: none;
+  }
+
+  .custom-file-input {
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .custom-file-label {
+    padding: 1em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="dropdown">
+  <span
+    class="fa fa-lg fa-ellipsis-h"
+    id="dropdownMenuButton"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  ></span>
+  <div
+    class="dropdown-menu dropdown-menu-right"
+    aria-labelledby="dropdownMenuButton"
+  >
+    <ng-template [ngIf]="hasInfo">
+      <h4 class="dropdown-header">
+        {{ "preview.charts.tooltips.title" | translate }}
+      </h4>
+      <div class="px-4">
+        <div class="indicatorInfo">
+          <p class="active">
+            {{ "preview.charts.tooltips.activated" | translate }}
+          </p>
+          <p class="default">
+            {{ "preview.charts.tooltips.deactivated" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+    </ng-template>
+    <h4 class="dropdown-header">
+      {{ "preview.charts.tooltips.actions" | translate }}
+    </h4>
+    <!-- <p class="dropdown-item-text" (click)="onDownload()">
+      <span class="fa fa-download"></span>
+      <span class="ml-2">{{ "navigation.downloadTooltip" | translate }}</span>
+    </p> -->
+    <p class="dropdown-item-text" (click)="onFullscreen()">
+      <span class="fa fa-expand-arrows-alt"></span>
+      <span class="ml-2">{{ "navigation.enterFullscreen" | translate }}</span>
+    </p>
+  </div>
+</div>

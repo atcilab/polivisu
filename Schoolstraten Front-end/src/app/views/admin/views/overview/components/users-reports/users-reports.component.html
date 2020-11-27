@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">{{ title }}</h4>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-3">
+        <r-box
+          [report-title]="'admin.users.allUsers' | translate"
+          [report-value]="users?.length"
+          src="assets/images/svg/004-social-media.svg"
+          [alt]="'admin.users.allUsers' | translate"
+        ></r-box>
+      </div>
+      <div class="col-3">
+        <r-box
+          [report-title]="'admin.users.admins' | translate"
+          [report-value]="admins"
+          src="assets/images/svg/001-social.svg"
+          [alt]="'admin.users.admins' | translate"
+        ></r-box>
+      </div>
+      <div class="col-3">
+        <r-box
+          [report-title]="'admin.users.creators' | translate"
+          [report-value]="creators"
+          src="assets/images/svg/002-social-1.svg"
+          [alt]="'admin.users.creators' | translate"
+        ></r-box>
+      </div>
+      <div class="col-3">
+        <r-box
+          [report-title]="'admin.users.users' | translate"
+          [report-value]="basics"
+          src="assets/images/svg/003-social-2.svg"
+          [alt]="'admin.users.users' | translate"
+        ></r-box>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer" *ngIf="navigate">
+    <a
+      [routerLink]="navigate"
+      class="d-block h5 mb-0 card-link text-center text-muted"
+      >{{ "admin.shared.seeMore" | translate }}</a
+    >
+  </div>
+</div>

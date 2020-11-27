@@ -1,0 +1,54 @@
+@import "src/assets/variables";
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  height: calc(100% - 1.5em);
+  box-shadow: none;
+
+  .card-body {
+    height: 100%;
+    .report-outter {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: ". .";
+      align-items: center;
+      border: solid thin $gray-300;
+      border-radius: 0.25em;
+      &:hover {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      .report-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        color: $gray-600;
+        line-height: 1.2;
+        padding: 10px;
+        &:first-of-type {
+          border-right: solid thin $gray-300;
+        }
+
+        img {
+          margin-bottom: 10px;
+        }
+
+        .number-big {
+          margin-bottom: 0;
+          font-size: 3em;
+          font-weight: 700;
+        }
+
+        .number-small {
+          margin-bottom: 0;
+          font-size: 1.25em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

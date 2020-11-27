@@ -1,0 +1,57 @@
+@import "src/assets/variables";
+
+footer {
+  background: $dark;
+  color: $white;
+  padding: 3.5em;
+
+  .nav {
+    .nav-item {
+      > .nav {
+        .nav-item {
+          .nav-link {
+            padding-left: 15px;
+          }
+        }
+      }
+      .nav-link {
+        color: $gray-600;
+        transition: color ease-in-out 0.25s;
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  p {
+    color: $gray-600;
+    transition: color ease-in-out 0.25s;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .created-by {
+    a > img,
+    img {
+      margin-top: 1em;
+      margin-right: 15px;
+      height: 60px;
+      max-height: 60px;
+      -o-object-fit: scale-down;
+      object-fit: scale-down;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        -webkit-filter: none;
+        filter: none;
+      }
+    }
+  }
+}

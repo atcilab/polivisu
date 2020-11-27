@@ -1,0 +1,32 @@
+@import "src/assets/variables";
+section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+  .card {
+    .card-body {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .card-title {
+        display: block;
+        font-size: 30px;
+        color: $dark;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .form-group:last-of-type {
+        .form-control {
+          margin-bottom: 3.5em;
+        }
+      }
+
+      img {
+        margin-bottom: 3.5em;
+      }
+    }
+  }
+}

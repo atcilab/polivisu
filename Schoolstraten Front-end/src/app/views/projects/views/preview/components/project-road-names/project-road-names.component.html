@@ -1,0 +1,29 @@
+<div class="road-names">
+  <div class="target-street">
+    <h6>{{ "preview.measurementsSchoolstreet" | translate }}</h6>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <a
+          [href]="getLink(project?.schoolStreetCamera?.id)"
+          rel="noopener"
+          target="_blank"
+          >{{ project?.schoolStreetCamera?.address }}</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="impact-streets">
+    <h6>{{ "preview.measurementsNeighbouring" | translate }}</h6>
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item"
+        *ngFor="let s of project?.neighbouringStreetCameras"
+      >
+        <a [href]="getLink(s.id)" rel="noopener" target="_blank">{{
+          s.address
+        }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

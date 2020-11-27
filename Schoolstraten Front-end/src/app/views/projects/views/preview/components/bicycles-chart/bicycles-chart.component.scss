@@ -1,0 +1,33 @@
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  height: calc(100% - 1.5em);
+
+  .card-header {
+    padding-top: 2em;
+    padding-bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      button {
+        margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

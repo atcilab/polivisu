@@ -1,0 +1,54 @@
+<div #reportsCard class="card">
+  <div class="card-header">
+    <div></div>
+
+    <div class="btn-group">
+      <button
+        class="btn"
+        (click)="onChangeCategory('1')"
+        [ngClass]="selected === '1' ? 'btn-primary' : 'btn-secondary'"
+      >
+        {{ "preview.reportCard.btnGroup.all" | translate }}
+      </button>
+      <button
+        class="btn"
+        (click)="onChangeCategory('2')"
+        [ngClass]="selected === '2' ? 'btn-primary' : 'btn-secondary'"
+      >
+        {{ "preview.reportCard.btnGroup.target" | translate }}
+      </button>
+      <button
+        class="btn"
+        (click)="onChangeCategory('3')"
+        [ngClass]="selected === '3' ? 'btn-primary' : 'btn-secondary'"
+      >
+        {{ "preview.reportCard.btnGroup.impact" | translate }}
+      </button>
+    </div>
+
+    <app-dropdown-menu
+      [hasInfo]="false"
+      [reports]="reports"
+      [element]="reportsCard"
+    ></app-dropdown-menu>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <object-report [object]="pedestrian"></object-report>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <object-report [object]="bike"></object-report>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <object-report [object]="car"></object-report>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <object-report [object]="lorry"></object-report>
+      </div>
+    </div>
+  </div>
+</div>

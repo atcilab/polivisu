@@ -1,0 +1,17 @@
+<button
+  class="btn"
+  [tooltip]="indicatorInfo"
+  [adaptivePosition]="false"
+  placement="left"
+  container="body"
+>
+  <span class="fa fa-info-circle"></span>
+</button>
+<ng-template #indicatorInfo>
+  <div class="indicatorInfo">
+    <p class="active">{{ "preview.charts.tooltips.activated" | translate }}</p>
+    <p class="default">
+      {{ "preview.charts.tooltips.deactivated" | translate }}
+    </p>
+  </div>
+</ng-template>

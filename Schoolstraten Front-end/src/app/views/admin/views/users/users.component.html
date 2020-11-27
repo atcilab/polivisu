@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">{{ "admin.users.title" | translate }}</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <caption class="pb-0">
+                {{
+                  "admin.users.caption" | translate
+                }}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" (click)="sortBy('firstName')">
+                    {{ "admin.users.fName" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('firstName')"></span>
+                  </th>
+                  <th scope="col" (click)="sortBy('lastName')">
+                    {{ "admin.users.lName" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('lastName')"></span>
+                  </th>
+                  <th scope="col" (click)="sortBy('email')">
+                    {{ "admin.users.email" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('email')"></span>
+                  </th>
+                  <th scope="col" (click)="sortBy('role')">
+                    {{ "admin.users.role" | translate }}
+                    <span class="fa" [ngClass]="isSortedBy('role')"></span>
+                  </th>
+                  <th scope="col">{{ "admin.users.actions" | translate }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let u of users">
+                  <td>{{ u.firstName }}</td>
+                  <td>{{ u.lastName }}</td>
+                  <td>{{ u.email }}</td>
+                  <td>{{ u.role | capitalize }}</td>
+                  <td>
+                    <button class="btn btn-sm" (click)="onEdit(u)">
+                      <span class="fa fa-edit"></span>
+                    </button>
+                    <button class="btn btn-sm" (click)="onRemove(u)">
+                      <span class="fa fa-trash"></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

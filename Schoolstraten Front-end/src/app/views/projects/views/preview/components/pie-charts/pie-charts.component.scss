@@ -1,0 +1,47 @@
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  height: calc(100% - 1.5em);
+
+  .card-header {
+    padding-top: 2em;
+    padding-bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > .row {
+      position: relative;
+
+      .row-title {
+        position: absolute;
+        top: 60%;
+
+        h6 {
+          margin-bottom: 0;
+          -webkit-transform: rotate(270deg);
+          -moz-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+          -o-transform: rotate(270deg);
+          transform: rotate(270deg);
+          -webkit-transform-origin: 0 0;
+          -moz-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+        }
+      }
+    }
+  }
+}

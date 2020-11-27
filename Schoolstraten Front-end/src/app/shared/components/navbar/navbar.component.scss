@@ -1,0 +1,21 @@
+@import "src/assets/variables";
+
+.navbar-nav {
+  .nav-item {
+    p.nav-link,
+    span.nav-link {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .dropdown-menu {
+    min-width: 2em;
+    width: max-content;
+
+    .dropdown-item-text:hover {
+      background: $gray-200;
+      cursor: pointer;
+    }
+  }
+}

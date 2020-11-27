@@ -1,0 +1,32 @@
+@import "src/assets/variables";
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+
+  .card-header {
+    padding-top: 2em;
+    padding-bottom: 0em;
+    background: $white;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    .form-group {
+      .label {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      small {
+        display: block;
+        margin-bottom: 0.5em;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

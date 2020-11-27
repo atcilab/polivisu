@@ -1,0 +1,48 @@
+@import "src/assets/variables";
+
+.card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: calc(100% - 1.5em);
+
+  .card-img-top {
+    flex-shrink: 0;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav {
+    .nav-item {
+      &:first-of-type {
+        .nav-link {
+          padding-left: 0;
+        }
+      }
+      &:last-of-type {
+        .nav-link {
+          padding-right: 0;
+        }
+      }
+      .nav-link {
+        color: $gray-600;
+        transition: color ease-in-out 0.25s;
+        padding: 0.5rem 0.25rem;
+        &:hover {
+          color: $dark;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

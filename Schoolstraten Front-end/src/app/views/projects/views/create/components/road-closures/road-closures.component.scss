@@ -1,0 +1,35 @@
+@import "src/assets/variables";
+
+.card {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+
+  .card-header {
+    background: $white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    .row {
+      margin-bottom: 1em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin-right: 10px;
+      display: inline;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

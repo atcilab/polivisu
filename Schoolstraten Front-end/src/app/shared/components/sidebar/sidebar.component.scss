@@ -1,0 +1,24 @@
+@import "src/assets/variables";
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: calc(100vh - 88.13px);
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: $white;
+
+  .sidebar-header {
+    padding: 1em;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: lighten($color: $dark, $amount: 30%);
+      &:hover,
+      &.active {
+        cursor: pointer;
+        color: $dark;
+      }
+    }
+  }
+}

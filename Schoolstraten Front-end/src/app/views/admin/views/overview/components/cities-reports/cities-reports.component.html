@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Cities that participating in the Schoolstraat</h4>
+
+    <button class="btn btn-sm px-3 py-2" (click)="onAddCity()">
+      <span class="fa fa-plus mr-1"></span>
+      <span>add city</span>
+    </button>
+  </div>
+
+  <div class="card-body" *ngIf="cities?.length > 0">
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table class="table table-borderless">
+            <caption>
+              Click on the image to preview
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">City name</th>
+                <th scope="col">City logo</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let c of cities; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ c.cityName }}</td>
+                <td>
+                  <img
+                    *ngIf="c.cityLogo; else noImg"
+                    [src]="c.cityLogo"
+                    [alt]="c.cityName"
+                    height="25"
+                    (click)="imagePreview(c)"
+                  />
+                  <ng-template #noImg>
+                    <span>-</span>
+                  </ng-template>
+                </td>
+                <td>
+                  <button class="btn btn-sm" (click)="onEdit(c)">
+                    <span class="fa fa-edit"></span>
+                  </button>
+                  <button class="btn btn-sm" (click)="onRemove(c)">
+                    <span class="fa fa-trash"></span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

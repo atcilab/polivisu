@@ -1,0 +1,28 @@
+@import "src/assets/variables";
+
+.dropdown {
+  > span {
+    &:hover {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+  .dropdown-menu {
+    max-width: fit-content;
+    min-width: 15rem;
+    .dropdown-header {
+      font-size: 1em;
+    }
+
+    p.dropdown-item-text {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        background: $gray-100;
+      }
+    }
+  }
+}

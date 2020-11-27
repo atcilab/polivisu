@@ -1,0 +1,8 @@
+<div class="report-box">
+  <img [src]="src" [alt]="reportTitle" height="75" />
+  <div>
+    <div class="report-text">{{ reportTitle }}</div>
+    <div class="report-title">{{ reportValue }}</div>
+    <div class="report-text" *ngIf="reportText">{{ reportText }}</div>
+  </div>
+</div>
