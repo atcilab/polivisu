@@ -1,4 +1,4 @@
-# Mechelen Dashboard API
+# Schoolstraten Dashboard API
 
 This API was created in the context of the PoliVisu project. It's about a dashboard called Schoolstraten and it's built using NodeJS, ExpressJS, MongoDB and AWS S3.
 

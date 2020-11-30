@@ -1,14 +1,20 @@
-# Mechelen
+# Schoolstraten Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
+## Install packages
+
+Run `npm install`
+
 ## Documentation
 
-Navigate to [doc-mechelen.surge.sh](doc-mechelen.surge.sh)
+To generate the documentation run `npm run compodoc` and to serve it `npm run compodoc-serve`.
+Navigate to [doc-mechelen.surge.sh](https://doc-mechelen.surge.sh)
 
-### Update the documentation
+<!-- ### Update the documentation
+**You need to have surge.sh account and globally installed the surge CLI**
 
-Run `npm run compodoc-deploy` to generate new version of the documentation. Enter `doc-mechelen.surge.sh` to proceed. The app will automatically generate and deploy the latest version [here](doc-mechelen.surge.sh)
+Run `npm run compodoc-deploy` to generate new version of the documentation. Enter `doc-mechelen.surge.sh` to proceed. The app will automatically generate and deploy the latest version [here](doc-mechelen.surge.sh) -->
 
 ## Development server
 
