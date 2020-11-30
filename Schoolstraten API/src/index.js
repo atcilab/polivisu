@@ -24,7 +24,7 @@ app.use("/api/cities", require("./routes/cities"));
 app.get("/", async (request, response, next) => {
   return response
     .status(200)
-    .json({ message: "Hello, World!", user: request.user });
+    .json({ message: "Schoolstraten API is alive!", user: request.user });
 });
 
 app.use((request, response, next) => {
@@ -37,8 +37,8 @@ app.use((error, request, response, next) => {
     .json({ error: error.message || "Internal Server Error" });
 });
 
-app.listen(process.env.PORT || 3000, async () => {
-  console.log(`Server is up and running on port ${process.env.PORT}`);
+app.listen(process.env.PORT || 8080, async () => {
+  console.log(`Server is up and running on http://localhost:${process.env.PORT}`);
 
   try {
     const db = await connect();
