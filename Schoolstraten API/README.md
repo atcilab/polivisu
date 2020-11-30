@@ -18,4 +18,4 @@ or simple copy the variables inside the `.env.example` and paste them into a new
 
 ## Development server
 
-Run `npm run dev` for a dev server. Navigate to http://localhost:<PORT>/. The app will automatically reload if you change any of the source files.
+Run `npm run dev` for a dev server. Navigate to given URL. The app will automatically reload if you change any of the source files.
